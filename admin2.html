@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Data dokter</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="plugins/fontawesome-free/css/all.min.css"
+    />
+    <!-- DataTables -->
+    <link
+      rel="stylesheet"
+      href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bs-brain@2.0.3/components/calendars/calendar-1/assets/css/calendar-1.css"
+    />
+    <link
+      rel="stylesheet"
+      href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css"
+    />
+    <link
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css" />
+  </head>
+  <body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <a href="#" class="brand-link">
+          <span class="ml-2 brand-text font-weight-light ml-3"
+            >SILOKER-Backend</span
+          >
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center">
+            <div class="image">
+              <i class="bi bi-person-circle text-white fs-3"></i>
+            </div>
+            <div class="info">
+              <a href="#" class="d-block">Ahmad Admin</a>
+            </div>
+          </div>
+
+          <!-- SidebarSearch Form -->
+          <div class="form-inline">
+            <div class="input-group" data-widget="sidebar-search">
+              <input
+                class="form-control form-control-sidebar"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <div class="input-group-append">
+                <button class="btn btn-sidebar">
+                  <i class="fas fa-search fa-fw"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- dashboard -->
+          <nav class="mt-2">
+            <ul
+              class="nav nav-pills nav-sidebar flex-column"
+              data-widget="treeview"
+              role="menu"
+              data-accordion="false"
+            >
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="bi bi-calendar-plus-fill mx-2"></i>
+                  <p>
+                    Dashboard
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="admin.html" class="nav-link">
+                      <i class="fa fa-bookmark nav-icon"></i>
+                      <p>Booking</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="admin2.html" class="nav-link">
+                      <i class="fa fa-bookmark nav-icon"></i>
+                      <p>Dokter</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="fa fa-tags nav-icon"></i>
+                      <p>Produk/Layanan</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a href="login.html" class="nav-link">
+                  <i class="fa fa-sign-out nav-icon"></i>
+                  <p>Log Out</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+
+      <div class="content-wrapper">
+        <h1 class="text-center">
+          Admin - Klinik Kesehatan Gigi Ananda - Depok
+        </h1>
+
+        <form class="form-inline my-3 my-lg-0 d-flex justify-content-end">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn my-2 my-sm-0" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+          <button
+            class="btn btn-outline-success my-2 my-sm-0 mx-2"
+            type="submit"
+          >
+            Login
+          </button>
+        </form>
+
+        <section class="border p-3 my-3 mx-4">
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Kelola Data Dokter</h3>
+            </div>
+            <div class="col-md-6">
+              <nav
+                style="--bs-breadcrumb-divider: ';>'"
+                aria-label="breadcrumb"
+              >
+                <ol
+                  class="breadcrumb d-flex justify-content-end"
+                  style="background-color: transparent"
+                >
+                  <li class="breadcrumb-item">
+                    <a href="#" class="text-decoration-none">Home</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="#" class="text-decoration-none">Admin</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Data Dokter
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+
+          <button
+            class="btn btn-outline-success my-2 my-sm-0 mx-2"
+            type="button"
+          >
+            Tambah
+          </button>
+
+          <table class="table table-striped mt-3">
+            <thead>
+              <tr>
+                <th scope="col">NO</th>
+                <th scope="col">Nama Dokter</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Keahlian</th>
+                <th scope="col">Telpon</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Drg. Amelia</td>
+                <td>Perempuan</td>
+                <td>Spesialisis Gigi Anak</td>
+                <td>0841231322</td>
+                <td>
+                  <a href="#">Detail</a> | <a href="#">Edit</a> |
+                  <a href="#">Delete</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Drg. Amelia</td>
+                <td>Perempuan</td>
+                <td>Spesialisis Gigi Anak</td>
+                <td>0841231322</td>
+                <td>
+                  <a href="#">Detail</a> | <a href="#">Edit</a> |
+                  <a href="#">Delete</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Drg. Amelia</td>
+                <td>Perempuan</td>
+                <td>Spesialisis Gigi Anak</td>
+                <td>0841231322</td>
+                <td>
+                  <a href="#">Detail</a> | <a href="#">Edit</a> |
+                  <a href="#">Delete</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Drg. Amelia</td>
+                <td>Perempuan</td>
+                <td>Spesialisis Gigi Anak</td>
+                <td>0841231322</td>
+                <td>
+                  <a href="#">Detail</a> | <a href="#">Edit</a> |
+                  <a href="#">Delete</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <footer class="main-footer text-center mt-auto py-3 bg-light">
+        Developed By <strong><a href="">Mahasiswa</a></strong>
+        STT-NF @2023
+      </footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="plugins/jszip/jszip.min.js"></script>
+    <script src="plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap5@6.1.9/index.global.min.js"></script>
+    <script src="https://unpkg.com/bs-brain@2.0.3/components/calendars/calendar-1/assets/controller/calendar-1.js"></script>
+    <!-- Page specific script -->
+    <script>
+      $(function () {
+        $("#example1")
+          .DataTable({
+            responsive: true,
+            lengthChange: false,
+            autoWidth: false,
+            buttons: ["copy", "csv", "excel", "pdf", "print", "colvis"],
+          })
+          .buttons()
+          .container()
+          .appendTo("#example1_wrapper .col-md-6:eq(0)");
+        $("#example2").DataTable({
+          paging: true,
+          lengthChange: false,
+          searching: false,
+          ordering: true,
+          info: true,
+          autoWidth: false,
+          responsive: true,
+        });
+      });
+    </script>
+  </body>
+</html>

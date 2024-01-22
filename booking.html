@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Booking Klinik Gigi</title>
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <header class="p-3 text-bg-primary">
+      <h1><center>Klinik Kesehatan Gigi Ananda - Depok</center></h1>
+      <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+              <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"></a>
+  
+              <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                  <li><a href="ladingpage.html" class="nav-link px-2 text-white">Home</a></li>
+                  <li><a href="layanan.html" class="nav-link px-2 text-white">Layanan</a></li>
+                  <li><a href="booking.html" class="nav-link px-2 text-white">Booking</a></li>
+                  <li><a href="#" class="nav-link px-2 text-white">Testimoni</a></li>
+                  <li><a href="#" class="nav-link px-2 text-white">Tentang Kami</a></li>
+              </ul>
+  
+              <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                  <input type="search" class="form-control form-control-dark text-bg-primary" placeholder ="Search..." aria-label="Search">
+              </form>
+  
+              <div class="text-end">
+                <button type="button" class="btn btn-outline-light me-2"><a href="login.html" style="text-decoration: none;color: white;" >Login</a></button>
+                <button type="button" class="btn btn-warning"><a href="regestrasi.html" style="text-decoration: none;color: white;">Sign-up</a></button>
+            </div>
+          </div>
+      </div>
+  </header>
+
+      <!-- content -->
+      <section class="p-3 border">
+        <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+          <ol class="breadcrumb d-flex justify-content-end">
+            <li class="breadcrumb-item">
+              <a href="#" class="text-decoration-none">Home</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Booking</li>
+          </ol>
+        </nav>
+
+        <fieldset class="border p-2">
+          <legend class="float-none w-auto p-2">
+            Booking Periksa Kesehatan Gigi
+          </legend>
+          <form>
+            <div class="form-group mt-2 row">
+              <label
+                for="namaPesanan"
+                class="col-sm-2 col-col-sm-2 col-form-label d-flex justify-content-end"
+                >Nama Pasien</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="namaPesanan"
+                  name="namaPesanan"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group mt-2 row">
+              <label
+                for="dokter"
+                class="col-sm-2 col-col-sm-2 col-form-label d-flex justify-content-end"
+                >Pilih Dokter</label
+              >
+              <div class="col-sm-10">
+                <select
+                  class="form-select"
+                  id="dokter"
+                  name="kategoriMinjam"
+                  required
+                >
+                  <option value="" disabled selected>Pilih Dokter</option>
+                  <option value="1">Dokter 1</option>
+                  <option value="2">Dokter 2</option>
+                  <option value="2">Dokter 3</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group mt-2 row">
+              <label
+                for="layanan"
+                class="col-sm-2 col-col-sm-2 col-form-label d-flex justify-content-end"
+                >Pilih Layanan</label
+              >
+              <div class="col-sm-10">
+                <select
+                  class="form-select"
+                  id="layanan"
+                  name="layanan"
+                  required
+                >
+                  <option value="" disabled selected>Pilih Layanan</option>
+                  <option value="1">Layanan 1</option>
+                  <option value="2">Layanan 2</option>
+                  <option value="2">Layanan 3</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group mt-2 row">
+              <label
+                for="keluhan"
+                class="col-sm-2 col-form-label d-flex justify-content-end"
+                >Keluhan</label
+              >
+              <div class="col-sm-10">
+                <textarea
+                  class="form-control"
+                  id="keluhan"
+                  name="keluhan"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="form-group mt-2 row">
+              <label
+                class="col-sm-2 col-col-sm-2 col-form-label d-flex justify-content-end"
+                >Pembayaran</label
+              >
+
+              <div class="col-sm-2 col-col-sm-2 col-form-label form-check ml-3">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="pembayaran"
+                  id="cash"
+                  value="cash"
+                />
+                <label class="form-check-label" for="kategori3">Cash</label>
+              </div>
+              <div class="col-sm-2 col-col-sm-2 col-form-label form-check ml-3">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="pembayaran"
+                  id="transfer"
+                  value="transfer"
+                />
+                <label class="form-check-label" for="transfer">Transfer</label>
+              </div>
+              <div class="col-sm-2 col-col-sm-2 col-form-label form-check ml-3">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="pembayaran"
+                  id="ewallet"
+                  value="ewallet"
+                />
+                <label class="form-check-label" for="ewallet">E-Wallet</label>
+              </div>
+            </div>
+
+            <div class="form-group mt-2 row">
+              <label
+                for="jamTanggalServis"
+                class="col-sm-2 col-form-label d-flex justify-content-end"
+              >
+                Tanggal Periksa</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="date"
+                  class="form-control"
+                  id="jamTanggalServis"
+                  name="jamTanggalServis"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group mt-2 row">
+              <label
+                for="Montir"
+                class="col-sm-2 col-form-label d-flex justify-content-end"
+                >Umur</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="Montir"
+                  name="Montir"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group mt-2 row">
+              <label
+                for="noTelepon"
+                class="col-sm-2 col-form-label d-flex justify-content-end"
+                >Telepon/HP</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="noTelepon"
+                  name="noTelepon"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group mt-2 row">
+              <label
+                for="email"
+                class="col-sm-2 col-form-label d-flex justify-content-end"
+                >Email</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group mt-2 row">
+              <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+              </div>
+            </div>
+          </form>
+        </fieldset>
+      </section>
+
+      <!-- footer -->
+      <footer class="mt-auto m-3 py-3 bg-light">
+        <hr />
+        Developed By <strong><a href="">Mahasiswa</a></strong>
+        STT-NF @2024
+      </footer>
+    </div>
+
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
